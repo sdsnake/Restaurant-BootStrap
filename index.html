@@ -30,7 +30,7 @@
                         <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-adress-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#LoginModal">
+                    <a>
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -158,8 +158,8 @@
                         <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                        <a data-toggle="modal" data-target="#reserveModal" role="button" class="btn btn-block nav-link btn-warning px-5" 
-                        data-html="true" title="Or Call us at<br><strong>+852 12345678</strong>"
+                        <a role="button" class="btn btn-block nav-link btn-warning px-5" 
+                        title="Or Call us at +852 12345678"
                         data-placement="bottom">
                              Reserve Table   
                         </a>
@@ -260,10 +260,8 @@
                         <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
                     </div>
                 </div>
+            </div>
         </div>
-    </div>
-
-    
     </div>
     <footer class="footer">
         <div class="container">
@@ -325,7 +323,19 @@
                 }     
             });
         });
-    </script>
+    
+            $(".navbar-text").click(function(){
+                $("#LoginModal").modal({
+                    fadeDuration: 100
+                });
+            });
+
+            $(".btn-warning").click(function(){
+                $("#reserveModal").modal({
+                    fadeDuration: 100
+                });
+            });
+        </script>
 </body>
 
 </html>
